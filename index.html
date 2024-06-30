@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker Wb Application</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="png" href="Images/tab">
+
+    <!-- --------For all icons---------- -->
+    <script src="https://kit.fontawesome.com/8ce0bceac7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar">
+            <a href="#transaction" class="navigation">Transactions</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <!-- <a href="#">Logout <i class="fa-solid fa-right-from-bracket"></i></a> -->
+        </nav>
+
+    </header>
+
+    <div class="container">
+            <div class="row">
+                <div class="col1">
+                    <div class="headertext">
+                        <h3>Welcome to</span></h3>
+                        <h2>Expense Tracker</h2>
+                    </div>
+                </div>
+                <div class="col2">
+                    <img src="Images/logo2.jpg">
+                </div>
+            </div>
+
+            <main>   
+                <div class="wrapper">
+                    <div>
+                        <h5>Total Balance</h5>
+                        <span id="balance">₹0.00</span>
+                    </div>
+                    <div>
+                        <h5>Income</h5>
+                        <span id="income">₹0.00</span>
+                    </div>
+                    <div>
+                        <h5>Expense</h5>
+                        <span id="expense">₹0.00</span>
+                    </div>
+                </div>  
+            <div class="wrapper2">
+                <section class="history">
+                    <h3>Transactions</h3>
+    
+                    <ul id="transaction-list"></ul>
+                    <div id="status"></div>
+                    <p><a href="#" class="add-link"><i class="fa-solid fa-plus"></i></a></p>
+                </section>
+    
+                <section class="addtransaction">
+                    <h3>Add Transaction</h3>
+    
+                    <form id="transaction-form">
+                        <div>
+                            <label for="type">
+                                <input type="checkbox" name="type" id="type">
+                                <div class="options">
+                                    <span>Expense</span>
+                                    <span>Income</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div>
+                         <label for="name">Expense type</label>
+                         <input type="text" name="name" required>
+                        </div>
+                        <div>
+                            <label for="amount">Amount</label>
+                         <input type="number" name="amount"
+                                    min="0.01" step="0.01" required>
+                        </div>
+                        <div>
+                            <label for="date">Enter Date</label>
+                         <input type="date" name="date" required>
+                        </div>
+                        <button type="submit">Add</button>
+                        <p><a href="#" class="history-link"><i class="fa-solid fa-clock-rotate-left"></i></a></p>
+                    </form>
+                
+                </section>
+            </div>    
+        </main>
+
+    </div>
+        
+        
+        <script src="script.js"></script>
+</body>
+</html>
+

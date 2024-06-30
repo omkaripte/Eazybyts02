@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" type="png" href="Images/contact.jpg">
+
+    <script src="https://kit.fontawesome.com/8ce0bceac7.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar">
+            <a href="index.html">Dashboard</a>
+            <a href="about.html">About</a>
+            
+        </nav>
+    </header>
+
+    <div class="container">
+            <div class="row">
+                <div class="col1">
+                    <div class="headertext">
+                        <h3>Welcome to</span></h3>
+                        <h2>Expense Tracker</h2>
+                    </div>
+                </div>
+                <div class="col2">
+                    <img src="Images/logo2.jpg">
+                </div>
+            </div>
+
+            <div id="contact">
+                <div class="row">
+
+                    <div class="cont-right">
+                        <h1 class="subtitle">Contact Us</h1>
+                        <h1 id="name"><i class="fa-regular fa-user"></i> Omkar Ipte</h1>
+                        <p><i class="fa-solid fa-envelope"></i> omkaripte28@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i> 8698143689</p>
+                    </div>
+
+                    <div class="cont-left">
+                                     <!-- Receive contact details on Email -->
+                            <form action="https://api.web3forms.com/submit" method="POST" id="form">
+                                <input type="hidden" name="access_key" value="7eb1448d-3e13-4aae-9b51-4a4cf29f66df"> 
+                            <input type="text" name="Name" placeholder="Name" required>
+                            <input type="email" name="Email" placeholder="Email" required>
+                            <textarea name="Message" rows="5" placeholder="Message"></textarea>
+                            <button type="submit" id="btn2"><i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+    
+        <script>
+                // ----------For Reset Form after sending details (Contact Section)----------//
+
+            var form = document.getElementById('form')
+            form.addEventListener('submit', e =>{
+            e.preventDefault()
+            fetch('https://api.web3forms.com/submit',{ 
+            method: 'POST' ,body: new FormData(form)})
+            .then(response => {
+            window.alert("Message sent successfully!")
+            form.reset()
+            })
+            .catch(error => console.error('Error!', error))
+            });
+        </script>
+
+</body>
+</html>
